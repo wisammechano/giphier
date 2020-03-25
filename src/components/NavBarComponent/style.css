@@ -1,0 +1,10 @@
+.search-btn {
+  height: 48px;
+  width: 48px;
+  background-color: blueviolet;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
