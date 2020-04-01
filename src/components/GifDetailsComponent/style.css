@@ -1,0 +1,19 @@
+.git-desc {
+  width: 240px;
+}
+
+.gif {
+  max-height: 35vh;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.social {
+  height: 36px;
+  width: 36px;
+  display: inline-block;
+}
+
+.copy-btn {
+  text-decoration: underline;
+}
