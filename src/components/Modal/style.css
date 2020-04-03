@@ -1,8 +1,8 @@
-.git-desc {
+.actions-wrapper {
   width: 240px;
 }
 
-.gif {
+.item {
   max-height: 35vh;
   max-width: 300px;
   object-fit: contain;

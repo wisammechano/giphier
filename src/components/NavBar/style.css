@@ -3,6 +3,14 @@
   width: 48px;
 }
 
+.active {
+  text-decoration: underline;
+}
+
+.active:focus {
+  text-decoration: underline;
+}
+
 textarea:focus,
 input:focus {
   outline: none;

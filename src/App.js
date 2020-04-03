@@ -1,8 +1,15 @@
-import React from 'react';
-import './App.css';
-import Nav from './components/NavBarComponent/NavBar.js'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import GifComponent from './components/Gifs/GifComponent';
+import React from "react";
+import "./App.css";
+import Nav from "./components/NavBar";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
+import Main from "./components/Main";
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -10,7 +17,14 @@ function App() {
       <Router>
         <Nav />
         <Switch>
-          <Route path="/" component={GifComponent} />
+          <Route path="/(gifs|stickers)" component={Main} />
+
+          <Route exact path="/search/:type/:query" component={Search} />
+
+          <Route path="/" render={() => <Redirect to="/gifs" />} />
+
+          {/* This is like 404 or default. Will match all! */}
+          <Route render={() => <Redirect to="/" />} />
         </Switch>
       </Router>
     </div>
